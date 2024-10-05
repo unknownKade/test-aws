@@ -18,6 +18,6 @@ public class HelloControllerTest {
     public void helloTest(){
         ResponseEntity<String> response = restTemplate.getForEntity("/hello", String.class);
 
-        Assertions.assertThat(response).isEqualTo("Hello Aws");
+        Assertions.assertThat(response.getBody()).isEqualTo("Hello Aws");
     }
 }
